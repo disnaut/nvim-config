@@ -1,5 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
+    event = { 'BufReadPre', 'BufNewFile' },
     dependencies = {
         'hrsh7th/cmp-nvim-lsp',
         { 'antosha417/nvim-lsp-file-operations', config = true },
@@ -16,7 +17,7 @@ return {
         local opts = { noremap = true, silent = true }
 
         local on_attach = function(client, bufnr)
-            opts.bufnr = bufnr
+            opts.buffer = bufnr
 
             -- keybinds
             opts.desc = 'Show LSP references'
@@ -90,7 +91,7 @@ return {
             on_attach = on_attach
         })
 
-        lspconfig['angularls'].setup({
+        lspconfig['tsserver'].setup({
             capabilities = capabilities,
             on_attach = on_attach,
             filetypes = { 'ts', 'typescript', 'html' }
@@ -116,7 +117,7 @@ return {
             on_attach = on_attach
         })
 
-        lspconfig['pylsp'].setup({
+        lspconfig['pyright'].setup({
             capabilities = capabilities,
             on_attach = on_attach
         })

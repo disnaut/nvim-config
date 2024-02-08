@@ -69,4 +69,4 @@ vim.keymap.set("n", "<leader>sf", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("n", "<leader>sl", [[:s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- This will remove all lines that start wth something
-vim.keymap.set('n', '<leader>rl', [[:g/^<<C-r><C-w\>/d<Left><Left>]]) 
+vim.keymap.set('n', '<leader>rl', [[:g/^<<C-r><C-w\>/d<Left><Left>]])

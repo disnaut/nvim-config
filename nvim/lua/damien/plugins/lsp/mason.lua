@@ -23,13 +23,11 @@ return {
         lspconfig.setup({
             ensure_installed = {
                 'angularls',
-                'omnisharp',
                 'cssls',
                 'cssmodules_ls',
-                'sqlls',
                 'jsonls',
                 'lua_ls',
-                'pylsp',
+                'pyright'
             },
 
             automatic_installation = true,
